@@ -166,13 +166,15 @@ ul{
 .rating:nth-child(2){
     margin-top: 40px;
 }
-.rating__title{
+.rating__title,
+.rating__title span{
     color: #DB3138;
     margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
 }
 .rating__title span{
     font-size: 52px;
-    color: #DB3138;
 }
 
 .rating-text{
