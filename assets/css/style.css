@@ -48,9 +48,8 @@ ul{
 .intro{
     text-align: center;
     margin: 150px auto 0;
-    width: 483px;
     flex-direction: column;
-    gap:40px;
+    gap: 40px;
     align-items: center;
 }
 .intro__title{
@@ -97,7 +96,6 @@ ul{
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     margin-top: 133px;
     text-align: center;
-    font-weight: 500;
 }
 .contact__item{
     flex-grow: 1;
@@ -138,11 +136,8 @@ ul{
 }
 .achievements__title{
     font-size: 52px;
-    /*width: 636px;*/
 }
-.achievements__story{
-    flex-basis: 50%;
-}
+.achievements__story,
 .achievements-wrapper{
     flex-basis: 50%;
 }
@@ -150,10 +145,12 @@ ul{
     margin: 40px 0 60px;
 }
 .achievements__text{
-    font-size: 20px;
+    font-size: 24px;
     text-align: left;
     letter-spacing: 1px;
     line-height: 120%;
+    font-weight: 500;
+    width: 526px;
 }
 .rating__item{
     padding: 25px 20px 35px;
@@ -162,20 +159,21 @@ ul{
     border-collapse: collapse;
 }
 .rating__item > img + p{
-    margin-top: 20px;
+    margin-top: 15px;
 }
 .rating:nth-child(2){
     margin-top: 40px;
 }
-.rating__title{
+.rating__title,
+.rating__title span{
     color: #DB3138;
     margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
 }
 .rating__title span{
     font-size: 52px;
-    color: #DB3138;
 }
-
 .rating-text{
     text-transform: none;
 }
