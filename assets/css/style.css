@@ -137,9 +137,7 @@ ul{
 .achievements__title{
     font-size: 52px;
 }
-.achievements__story{
-    flex-basis: 50%;
-}
+.achievements__story,
 .achievements-wrapper{
     flex-basis: 50%;
 }
@@ -176,7 +174,6 @@ ul{
 .rating__title span{
     font-size: 52px;
 }
-
 .rating-text{
     text-transform: none;
 }
