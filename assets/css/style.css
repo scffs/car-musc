@@ -18,8 +18,18 @@ a{
     transition: color .25s linear;
     box-sizing: border-box;
 }
-.main-nav__link:hover{
-    color: #DB3138;
+.visually-hidden{
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    clip: rect(0 0 0 0);
+    margin: 0;
+    padding: 0;
+}
+.text{
+    line-height: 140%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 ul{
     list-style-type: none;
@@ -41,6 +51,9 @@ ul{
 }
 .header-nav{
     padding-top: 40px;
+}
+.main-nav__link:hover{
+    color: #DB3138;
 }
 .main-nav__item:not(:last-child){
     margin-right: 40px;
@@ -118,11 +131,6 @@ ul{
     bottom: 0;
     top: 0;
 }
-.text{
-    line-height: 140%;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
 .contact__title{
     font-size: 18px;
     margin-bottom: 15px;
@@ -176,4 +184,37 @@ ul{
 }
 .rating-text{
     text-transform: none;
+}
+
+.racing-competitions{
+    margin-top: 180px;
+    margin-bottom: 900px;
+}
+.slider-inner{
+    display: flex;
+    gap: 24px;
+    position: relative;
+}
+.slider__item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.slider__text{
+    position: absolute;
+    bottom: -50px;
+    text-align: center;
+    z-index: 2;
+}
+.slider__text::after{
+    content: '';
+    position: absolute;
+    width: 366px;
+    height: 70px;
+    background-color: #DB3138;
+    top: -25px;
+    display: block;
+    z-index: -1;
+    left: -67px;
 }
