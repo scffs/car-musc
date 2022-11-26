@@ -218,3 +218,12 @@ ul{
     z-index: -1;
     left: -67px;
 }
+
+.buttons-wrapper{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.slider-btn{
+    
+}
