@@ -18,6 +18,9 @@ a{
     transition: color .25s linear;
     box-sizing: border-box;
 }
+section{
+    margin-bottom: 180px;
+}
 .visually-hidden{
     width: 1px;
     height: 1px;
@@ -43,6 +46,7 @@ button{
 
 }
 .title{
+    text-align: center;
     font-size: 52px;
 }
 ul{
@@ -59,6 +63,10 @@ ul{
 .d-flex{
     display: flex;
 }
+.decor{
+    display: flex;
+    margin: 40px auto;
+}
 .header{
     background-image: url("../images/header-bg.png");
     margin-bottom: 180px;
@@ -66,7 +74,7 @@ ul{
 .header-nav{
     padding-top: 40px;
 }
-.main-nav__link:hover{
+.main-nav__link:hover, .link.link-secondary:hover{
     color: #DB3138;
 }
 .main-nav__item:not(:last-child){
@@ -85,9 +93,6 @@ ul{
     line-height: 1.25;
     font-size: 150px;
     font-weight: bold;
-}
-.intro__image{
-    margin: -20px auto 0;
 }
 .intro__text{
     font-size: 40px;
@@ -338,6 +343,26 @@ ul{
     .features__wrapper {
         gap: unset;
     }
+}
+.services__wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.services__links{
+    display: flex;
+    gap: 80px;
+}
+.services__links > .link::before{
+    width: 100%;
+    transition: width .3s linear;
+}
+.services__links > .link:hover::before{
+    width: 70%;
+    transition: width .3s linear;
+}
+.link.link-secondary::before{
+    content: none;
 }
 
 
