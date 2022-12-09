@@ -26,10 +26,24 @@ a{
     margin: 0;
     padding: 0;
 }
+button{
+    cursor: pointer;
+}
 .text{
     line-height: 140%;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+.text--fz_24{
+    font-size: 24px;
+    text-align: left;
+    letter-spacing: 1px;
+    line-height: 120%;
+    font-weight: 500;
+
+}
+.title{
+    font-size: 52px;
 }
 ul{
     list-style-type: none;
@@ -142,23 +156,12 @@ ul{
 .achievements{
     gap: 24px;
 }
-.achievements__title{
-    font-size: 52px;
-}
 .achievements__story,
 .achievements-wrapper{
     flex-basis: 50%;
 }
 .achievements__story > img{
     margin: 40px 0 60px;
-}
-.achievements__text{
-    font-size: 24px;
-    text-align: left;
-    letter-spacing: 1px;
-    line-height: 120%;
-    font-weight: 500;
-    width: 526px;
 }
 .rating__item{
     padding: 25px 20px 35px;
@@ -185,10 +188,12 @@ ul{
 .rating-text{
     text-transform: none;
 }
-
 .racing-competitions{
     margin-top: 180px;
-    margin-bottom: 900px;
+    margin-bottom: 200px;
+}
+.racing-competitions__slider{
+    position: relative;
 }
 .slider-inner{
     display: flex;
@@ -214,16 +219,131 @@ ul{
     height: 70px;
     background-color: #DB3138;
     top: -25px;
-    display: block;
     z-index: -1;
     left: -67px;
 }
-
-.buttons-wrapper{
+.slider-btn{
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    background-color: transparent;
+    border: 1px solid #DB3138;
+}
+.slider-btn::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    transform: rotate(135deg);
+    background: url("../images/arrow.svg") no-repeat center center;
+}
+.slider-btn--prev{
+    left: -100px;
+}
+.slider-btn--next{
+    right: -100px;
+}
+.slider-btn--next.slider-btn::after{
+    right: -2px;
+    transform: rotate(-45deg);
+    top: -4px;
+}
+.features__wrapper{
+    position: relative;
     display: flex;
     justify-content: space-between;
+    gap: 135px;
+}
+.features__list{
+    flex: 1 0 50%;
+}
+.features__item:not(:last-child){
+    margin-bottom: 105px;
     position: relative;
 }
-.slider-btn{
-    
+.features__item:not(:last-child)::after{
+    content: '';
+    position: absolute;
+    width: 147px;
+    height: 15px;
+    background: url("../images/decor.svg") no-repeat center;
+    top: 210px;
+    left: 40%;
 }
+.features__item:nth-child(2)::after{
+    top: 240px;
+}
+.item-features__top{
+    display: flex;
+    align-items: start;
+    gap: 35px;
+    margin-bottom: 25px;
+}
+.features__title{
+    font-size: 32px;
+    line-height: 140%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    min-height: 90px;
+}
+.features__slider > .slider-inner--features .slider__text--features{
+    text-align: center;
+    margin-top: 50px;
+}
+.features__slider > .buttons-wrapper{
+    position: absolute;
+    right: -122px;
+}
+.features__slider > .buttons-wrapper > .slider-btn{
+    top: unset;
+    bottom: 5px;
+}
+.features__slider > .buttons-wrapper > .slider-btn--next{
+    right: 25px;
+}
+.features__slider > .buttons-wrapper > .slider-btn--prev{
+    left: unset;
+    right: 590px;
+}
+@media (max-width: 1569px) {
+    .features__list{
+        display: flex;
+        gap:40px;
+        justify-content: space-between;
+    }
+    .features__item:not(:last-child)::after{
+        display: none;
+    }
+    .features__item{
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        flex: 1 1 30%;
+    }
+    .features__wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .features__slider > .buttons-wrapper{
+        right: 25%;
+    }
+    .text--fz_24{
+        width: unset;
+    }
+    .features__wrapper {
+        gap: unset;
+    }
+}
+.features{
+    margin-bottom: 800px;
+}
+
+
+
+
